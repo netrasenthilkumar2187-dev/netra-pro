@@ -1,0 +1,310 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Netra's projects portfolio featuring her Electronic Store Java project.">
+<title>Projects | Netra</title>
+
+<style>
+:root {
+  --bg: #fff9f2;
+  --card: #fff;
+  --text: #302b2a;
+  --muted: #746b67;
+  --accent: #e87961;
+  --line: #f0dfd6;
+}
+
+body.dark {
+  --bg: #211e1e;
+  --card: #302a29;
+  --text: #fff5ef;
+  --muted: #d2bfba;
+  --accent: #f49a82;
+  --line: #4a3b38;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: Arial, sans-serif;
+  transition: background 0.3s, color 0.3s;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 7%;
+  border-bottom: 1px solid var(--line);
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: bold;
+  color: var(--accent);
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+a {
+  color: var(--text);
+  text-decoration: none;
+}
+
+.links a:hover,
+.links a.active {
+  color: var(--accent);
+}
+
+main {
+  max-width: 1100px;
+  margin: auto;
+  padding: 50px 7%;
+  min-height: 75vh;
+}
+
+h1 {
+  font-size: clamp(32px, 5vw, 46px);
+  margin: 10px 0;
+}
+
+h2 {
+  color: var(--accent);
+}
+
+p {
+  color: var(--muted);
+  line-height: 1.8;
+}
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  gap: 22px;
+  margin-top: 30px;
+}
+
+.card {
+  background: var(--card);
+  padding: 25px;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(70, 45, 30, 0.07);
+}
+
+.status {
+  display: inline-block;
+  background: var(--bg);
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  padding: 6px 10px;
+  font-size: 12px;
+  margin-bottom: 12px;
+  align-self: flex-start;
+}
+
+.details {
+  display: none;
+  border-top: 1px solid var(--line);
+  margin-top: 16px;
+  padding-top: 10px;
+}
+
+.details.open {
+  display: block;
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: auto;
+  padding-top: 16px;
+}
+
+button,
+.btn {
+  background: var(--accent);
+  color: white;
+  border: 0;
+  border-radius: 9px;
+  padding: 11px 14px;
+  cursor: pointer;
+  font-size: 14px;
+  display: inline-block;
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--accent);
+  border: 1px solid var(--accent);
+}
+
+footer {
+  text-align: center;
+  padding: 25px;
+  border-top: 1px solid var(--line);
+}
+
+footer p {
+  margin: 4px;
+}
+
+@media (max-width: 650px) {
+  nav {
+    justify-content: center;
+  }
+
+  .links {
+    justify-content: center;
+    gap: 12px;
+  }
+}
+</style>
+</head>
+
+<body>
+<nav>
+  <a class="logo" href="index.html">Netra.</a>
+
+  <div class="links">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="achievements.html">Skills</a>
+    <a class="active" href="projects.html">Projects</a>
+    <a href="contact.html">Contact</a>
+
+    <button id="themeBtn" type="button" aria-label="Toggle dark mode">
+      🌙
+    </button>
+  </div>
+</nav>
+
+<main>
+  <p style="color:var(--accent);font-weight:bold">
+    THINGS I'M BUILDING
+  </p>
+
+  <h1>My Projects</h1>
+
+  <p>
+    This project reflects my interest in programming and building
+    practical applications.
+  </p>
+
+  <div class="projects">
+    <article class="card">
+      <span class="status">Java Project</span>
+
+      <h2>Electronic Store</h2>
+
+      <p>
+        Explore my Electronic Store project, organized in the Java
+        project folder on GitHub. Visit the repository to see the
+        source code and available project files.
+      </p>
+
+      <div class="actions">
+        <button
+          type="button"
+          class="toggle"
+          aria-expanded="false"
+        >View Details</button>
+
+        <a
+          class="btn"
+          href="https://github.com/netrasenthilkumar2187-dev/Electronic-Store/tree/main/java%20pro"
+          target="_blank"
+          rel="noopener noreferrer"
+        >View on GitHub ↗</a>
+      </div>
+
+      <div class="details">
+        <p><strong>Project:</strong> Electronic Store</p>
+        <p><strong>Technology:</strong> Java</p>
+        <p><strong>Platform:</strong> GitHub</p>
+        <p>
+          Open the repository to explore the source code and
+          available project files.
+        </p>
+      </div>
+    </article>
+  </div>
+</main>
+
+<footer>
+  <p>© <span id="year"></span> Netra S</p>
+</footer>
+
+<script>
+document.querySelectorAll(".toggle").forEach(button => {
+  button.addEventListener("click", () => {
+    const details = button.closest(".card").querySelector(".details");
+    const open = details.classList.toggle("open");
+
+    button.textContent = open ? "Hide Details" : "View Details";
+    button.setAttribute("aria-expanded", String(open));
+  });
+});
+
+const themeBtn = document.getElementById("themeBtn");
+
+try {
+  if (localStorage.getItem("portfolio-theme") === "dark") {
+    document.body.classList.add("dark");
+  }
+} catch (error) {
+  // The page still works if browser storage is unavailable.
+}
+
+function updateThemeButton() {
+  themeBtn.textContent =
+    document.body.classList.contains("dark") ? "☀️" : "🌙";
+}
+
+updateThemeButton();
+
+themeBtn.addEventListener("click", () => {
+  document.body.classList.toggle("dark");
+
+  const isDark = document.body.classList.contains("dark");
+
+  updateThemeButton();
+
+  try {
+    localStorage.setItem("portfolio-theme", isDark ? "dark" : "light");
+  } catch (error) {
+    // Theme switching still works on this page.
+  }
+});
+
+document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact | Netra</title>
+<style>
+:root{--bg:#fff9f2;--card:#fff;--text:#302b2a;--muted:#746b67;--accent:#e87961;--line:#f0dfd6}
+body.dark{--bg:#211e1e;--card:#302a29;--text:#fff5ef;--muted:#d2bfba;--accent:#f49a82;--line:#4a3b38}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font-family:Arial,sans-serif}
+nav{display:flex;justify-content:space-between;align-items:center;padding:20px 7%;border-bottom:1px solid var(--line);gap:15px;flex-wrap:wrap}
+.logo{font-size:22px;font-weight:bold;color:var(--accent)}.links{display:flex;gap:18px;flex-wrap:wrap}
+a{color:var(--text);text-decoration:none}.links a:hover{color:var(--accent)}
+main{max-width:850px;margin:auto;padding:55px 7%}h1{font-size:clamp(34px,5vw,48px)}h2{color:var(--accent)}
+p{color:var(--muted);line-height:1.8}.card{background:var(--card);padding:25px;border:1px solid var(--line);border-radius:16px;margin:18px 0}
+.contact-link{display:block;padding:14px 0;border-bottom:1px solid var(--line);overflow-wrap:anywhere}
+button{background:var(--accent);color:white;border:0;border-radius:9px;padding:11px 14px;cursor:pointer}
+footer{text-align:center;padding:25px;border-top:1px solid var(--line)}
+@media(max-width:650px){nav{justify-content:center}.links{justify-content:center;gap:12px}}
+</style>
+</head>
+<body>
+<nav>
+  <a class="logo" href="index.html">Netra.</a>
+  <div class="links">
+    <a href="index.html">Home</a><a href="about.html">About</a>
+    <a href="achievements.html">Skills</a><a href="projects.html">Projects</a>
+    <a href="contact.html">Contact</a><button id="themeBtn">🌙</button>
+  </div>
+</nav>
+<main>
+  <p style="color:var(--accent);font-weight:bold">LET'S CONNECT</p>
+  <h1>Contact Me</h1>
+  <p>Have a project idea, collaboration opportunity, or internship opportunity? Feel free to reach out.</p>
+
+  <section class="card">
+    <h2>Get in Touch</h2>
+    <a class="contact-link" href="mailto:netrasenthilkumar2187@gmail.com">
+      ✉️ Email: netrasenthilkumar2187@gmail.com
+    </a>
+    <a class="contact-link" href="https://github.com/netrasenthilkumar2187-dev" target="_blank" rel="noopener noreferrer">
+      💻 GitHub: View my repositories ↗
+    </a>
+    <a class="contact-link" href="https://www.linkedin.com/in/netra-senthilkumar-2a8778394/" target="_blank" rel="noopener noreferrer">
+      🔗 LinkedIn: Connect with me ↗
+    </a>
+    <p><button id="copyEmail" type="button">Copy Email Address</button> <span id="copyStatus" role="status"></span></p>
+  </section>
+</main>
+<footer>© 2026 Netra S</footer>
+<script>
+const b=document.getElementById("themeBtn");
+if(localStorage.getItem("portfolio-theme")==="dark"){document.body.classList.add("dark");b.textContent="☀️"}
+b.onclick=()=>{document.body.classList.toggle("dark");const d=document.body.classList.contains("dark");b.textContent=d?"☀️":"🌙";localStorage.setItem("portfolio-theme",d?"dark":"light")};
+document.getElementById("copyEmail").addEventListener("click",async()=>{
+  const email="netrasenthilkumar2187@gmail.com";
+  const status=document.getElementById("copyStatus");
+  try{await navigator.clipboard.writeText(email);status.textContent="Email copied!"}
+  catch(e){status.textContent="Please copy the email manually: "+email}
+});
+</script>
+</body>
+</html>

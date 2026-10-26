@@ -1,0 +1,83 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Skills & Achievements | Netra</title>
+<style>
+:root{--bg:#fff9f2;--card:#fff;--text:#302b2a;--muted:#746b67;--accent:#e87961;--line:#f0dfd6}
+body.dark{--bg:#211e1e;--card:#302a29;--text:#fff5ef;--muted:#d2bfba;--accent:#f49a82;--line:#4a3b38}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font-family:Arial,sans-serif}
+nav{display:flex;justify-content:space-between;align-items:center;padding:20px 7%;border-bottom:1px solid var(--line);gap:15px;flex-wrap:wrap}
+.logo{font-size:22px;font-weight:bold;color:var(--accent)}.links{display:flex;gap:18px;flex-wrap:wrap}
+a{color:var(--text);text-decoration:none}.links a:hover{color:var(--accent)}
+main{max-width:1100px;margin:auto;padding:50px 7%}h1{font-size:clamp(32px,5vw,46px)}h2{color:var(--accent)}
+p,li{color:var(--muted);line-height:1.8}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px}
+.card{background:var(--card);padding:24px;border:1px solid var(--line);border-radius:16px;margin:20px 0}
+.tags{display:flex;gap:9px;flex-wrap:wrap}.tag{background:var(--bg);border:1px solid var(--line);border-radius:30px;padding:9px 12px;font-size:14px}
+button{background:var(--accent);color:white;border:0;border-radius:9px;padding:10px 14px;cursor:pointer}
+footer{text-align:center;padding:25px;border-top:1px solid var(--line)}
+@media(max-width:650px){nav{justify-content:center}.links{justify-content:center;gap:12px}}
+</style>
+</head>
+<body>
+<nav>
+  <a class="logo" href="index.html">Netra.</a>
+  <div class="links">
+    <a href="index.html">Home</a><a href="about.html">About</a>
+    <a href="achievements.html">Skills</a><a href="projects.html">Projects</a>
+    <a href="contact.html">Contact</a><button id="themeBtn">🌙</button>
+  </div>
+</nav>
+<main>
+  <p style="color:var(--accent);font-weight:bold">MY TOOLKIT & PROGRESS</p>
+  <h1>Skills & Achievements</h1>
+  <p>Skills I have learned, practiced, or am currently developing.</p>
+
+  <div class="grid">
+    <section class="card">
+      <h2>Technical Skills</h2>
+      <div class="tags">
+        <span class="tag">HTML</span><span class="tag">CSS</span>
+        <span class="tag">JavaScript</span><span class="tag">Python</span>
+        <span class="tag">Java</span><span class="tag">C</span>
+        <span class="tag">C++</span><span class="tag">SQLite</span>
+        <span class="tag">GitHub</span><span class="tag">VS Code</span>
+        <span class="tag">Backend Development</span><span class="tag">Frontend Development</span>
+        <span class="tag">Full Stack Development</span><span class="tag">AI Integration</span>
+      </div>
+    </section>
+    <section class="card">
+      <h2>Personal & Professional Skills</h2>
+      <div class="tags">
+        <span class="tag">Leadership</span><span class="tag">Communication</span>
+        <span class="tag">Teamwork</span><span class="tag">Problem-Solving</span>
+        <span class="tag">Creativity</span><span class="tag">Critical Thinking</span>
+        <span class="tag">Adaptability</span><span class="tag">Taking Initiative</span>
+        <span class="tag">Decision-Making</span><span class="tag">Presentation Skills</span>
+        <span class="tag">Idea Generation</span><span class="tag">Project Management</span>
+        <span class="tag">Project Planning</span><span class="tag">Creative Thinking</span>
+      </div>
+    </section>
+  </div>
+
+  <section class="card">
+    <h2>Achievements & Experience</h2>
+    <ul>
+      <li>Selected in the college inter-department Smart India Hackathon process.</li>
+      <li>Working on Nexora, an education financial support platform concept.</li>
+      <li>Exploring ideas involving web development, AI integration, and automation.</li>
+      <li>Developing programming, presentation, and teamwork skills through practical project work.</li>
+    </ul>
+    <p><em>Note: Project and achievement descriptions reflect work in progress and participation; no unearned awards or completion claims are made.</em></p>
+  </section>
+</main>
+<footer>© 2026 Netra S</footer>
+<script>
+const b=document.getElementById("themeBtn");
+if(localStorage.getItem("portfolio-theme")==="dark"){document.body.classList.add("dark");b.textContent="☀️"}
+b.onclick=()=>{document.body.classList.toggle("dark");const d=document.body.classList.contains("dark");b.textContent=d?"☀️":"🌙";localStorage.setItem("portfolio-theme",d?"dark":"light")};
+</script>
+</body>
+</html>
